@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { assets, projectsData } from "../assets/assets";
+import { motion } from "motion/react";
 // import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
@@ -9,7 +10,7 @@ const Projects = () => {
 
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
-    // const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // 🧩 Responsive card count
   useEffect(() => {
@@ -72,7 +73,11 @@ const Projects = () => {
   const translatePercent = (100 / cardToShow) * currentIndex;
 
   return (
-    <div
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      viewport={{ once: true }}
       className="container mx-auto py-4 pt-20 px-6 md:px-20 lg:px-32 my-20 w-full overflow-hidden"
       id="projects"
     >
@@ -111,7 +116,9 @@ const Projects = () => {
       >
         <div
           className={`flex gap-8 ${
-            isTransitioning ? "transition-transform duration-700 ease-in-out" : ""
+            isTransitioning
+              ? "transition-transform duration-700 ease-in-out"
+              : ""
           }`}
           style={{
             transform: `translateX(-${translatePercent}%)`,
@@ -140,10 +147,7 @@ const Projects = () => {
           ))}
 
           {/* “See All Projects” Card */}
-          <div
-            
-            className="relative shrink-0 w-full sm:w-1/2 lg:w-1/3 flex flex-col justify-center items-center bg-gray-200 rounded shadow-md hover:bg-gray-300 transition-all duration-500 cursor-pointer"
-          >
+          <div className="relative shrink-0 w-full sm:w-1/2 lg:w-1/3 flex flex-col justify-center items-center bg-gray-200 rounded shadow-md hover:bg-gray-300 transition-all duration-500 cursor-pointer">
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 flex justify-center items-center rounded-full bg-blue-500 hover:bg-blue-600 transition-all duration-300">
                 <img
@@ -159,7 +163,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { motion } from "motion/react";
 
 const Contacts = () => {
   const [result, setResult] = React.useState("");
@@ -32,7 +33,11 @@ const Contacts = () => {
   };
 
   return (
-    <div
+    <motion.div
+     initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      viewport={{ once: true }}
       className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden"
       id="contacts"
     >
@@ -109,7 +114,7 @@ const Contacts = () => {
           </div>
         </form>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

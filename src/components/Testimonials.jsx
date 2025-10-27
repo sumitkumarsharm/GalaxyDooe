@@ -1,11 +1,17 @@
 import { ArrowRightCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { testimonialsData } from "../assets/assets";
+import { motion } from "motion/react";
 
 export default function Testimonials() {
 
   return (
-    <section className="container mx-auto py-20 px-6 md:px-20 lg:px-32" id="testimonial">
+    <motion.section
+    initial={{ x: 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      viewport={{ once: true }}
+    className="container mx-auto py-20 px-6 md:px-20 lg:px-32" id="testimonial">
       {/* Heading */}
       <div className="text-center mb-14">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
@@ -50,6 +56,6 @@ export default function Testimonials() {
         {/* Last "See All Projects" Card */}
        
       </div>
-    </section>
+    </motion.section>
   );
 }

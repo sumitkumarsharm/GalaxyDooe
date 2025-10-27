@@ -1,12 +1,17 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { motion } from "motion/react";
 
 const About = () => {
   // use tostify
   
 
   return (
-    <div
+    <motion.div
+      initial={{ x: 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      viewport={{ once: true }}
       className="flex flex-col justify-center items-center container mx-auto p-14  md:px-20 lg:px-32 overflow-hidden"
       id="About"
     >
@@ -51,7 +56,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
