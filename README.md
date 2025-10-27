@@ -4,7 +4,6 @@
 This is a responsive real estate web application built with React. It showcases rental properties, homes, agents, and loan services through an interactive and visually appealing interface. The app includes project portfolios, client testimonials, and a contact form for user engagement.
 
 
-
 ## Features
 - React-based single-page application (SPA) architecture
 - Dynamic navigation with smooth scrolling to different sections
@@ -31,6 +30,10 @@ This is a responsive real estate web application built with React. It showcases 
 - React hooks for component lifecycle and form handling
 - Accessibility features including ARIA attributes for notifications
 - Responsive flexbox and grid layouts
+
+## Live preview
+[Live Preview](https://galaxy-door.vercel.app)
+
 
 ## Installation
 1. Clone the repository:
