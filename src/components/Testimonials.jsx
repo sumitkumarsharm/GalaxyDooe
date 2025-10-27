@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { testimonialsData } from "../assets/assets";
 
 export default function Testimonials() {
-//   const navigate = useNavigate();
 
   return (
     <section className="container mx-auto py-20 px-6 md:px-20 lg:px-32" id="testimonial">
