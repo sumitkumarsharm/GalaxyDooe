@@ -2,6 +2,9 @@ import React from "react";
 import { assets } from "../assets/assets";
 
 const About = () => {
+  // use tostify
+  
+
   return (
     <div
       className="flex flex-col justify-center items-center container mx-auto p-14  md:px-20 lg:px-32 overflow-hidden"
@@ -44,7 +47,7 @@ const About = () => {
           </div>
           <div>
             <p className="my-10">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem repellat esse minus pariatur ad, quis suscipit, porro delectus corrupti quasi aperiam rerum commodi tempora nisi sed odio illo soluta! Pariatur, tenetur modi magni quasi repellendus blanditiis, fugiat dictadoloremque, minima, cum error quo dolore debitis, repellendus consectetur excepturi ducimus  delectus voluptate dolorem necessitatibus. Fugiat similique soluta, blanditiis dolor earum odit harum maiores expedita voluptatibus magnam accusantium temporibus minima ex natus, perspiciatis consequatur veniam eius quia quisquam optio.</p>
-            <button className="px-10 py-2 rounded bg-blue-500 border-2 border-transparent hover:bg-transparent hover:border-blue-500 text-white hover:text-blue-600  ">Learn more </button>
+            <button  className="px-10 py-2 rounded bg-blue-500 border-2 border-transparent hover:bg-transparent hover:border-blue-500 text-white hover:text-blue-600  ">Learn more </button>
           </div>
         </div>
       </div>
