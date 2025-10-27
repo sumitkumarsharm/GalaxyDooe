@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
-import SignupForm from "./SignupForm"; // 👈 Import it
+import SignupForm from "./SignupForm";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -13,7 +13,10 @@ const Navbar = () => {
   return (
     <div className="absolute top-0 left-0 w-full z-10 bg-transparent">
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32">
-        <img className="w-10" src={assets.logo} alt="" />
+        <h2 className="cursor-pointer text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 tracking-tight">
+  GD
+</h2>
+
         <ul className="hidden md:flex gap-7 text-white">
           <a href="#header" className="hover:text-red-400">Home</a>
           <a href="#About" className="hover:text-red-400">About</a>

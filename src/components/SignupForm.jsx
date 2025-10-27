@@ -1,4 +1,3 @@
-// SignupForm.jsx
 import React from "react";
 
 const SignupForm = ({ onClose }) => {
